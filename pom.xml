@@ -54,6 +54,18 @@
             <version>${hbase.version}</version>
         </dependency>
 
+        <!--<dependency>
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-java</artifactId>
+            <version>${flink.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-streaming-java_${scala.version}</artifactId>
+            <version>${flink.version}</version>
+        </dependency>-->
+
         <!-- 引入 Flink 相关依赖-->
         <dependency>
             <groupId>org.apache.flink</groupId>
@@ -111,6 +123,17 @@
             <version>${flink.version}</version>
         </dependency>
 
-    </dependencies>
+        <dependency><!--在 idea 运行的时候,可以打开 web 页面-->
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-runtime-web_${scala.version}</artifactId>
+            <version>${flink.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-websocket</artifactId>
+            <!-- 请替换下面的version为你所使用的Flink版本对应的WebSocket依赖版本 -->
+            <version>1.14.0</version> <!-- 示例版本，请根据实际Flink版本调整 -->
+        </dependency>
 
+    </dependencies>
 </project>
